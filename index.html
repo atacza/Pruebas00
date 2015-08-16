@@ -5,8 +5,8 @@
 	y esta declaracion de  meta es  para el navegador  -->
 	<meta charset="utf-8" />
 	<!-- esta descripcion solo google lo muestra en el resultado de busqueda , pero para el usuario no se ve por ningun lado
-	es recomendable que paginas diferentes tengan diferentes  descriptions-->
-	<meta description="Prueba del curso web"/>
+	es recomendable que paginas diferentes tengan diferentes  descriptions  160 caracteres-->
+	<meta name="description" content="Prueba del curso web"/>
 
 	<!-- metas que ya no se usan, (keywords, tags,  -->
 
@@ -20,16 +20,74 @@
 	<ARTICLE>
 	<FOOTER>
 	-->
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="estilos.css">
 </head>
 	<body>
-		<HEADER>
+		<header>
 		<!-- usaremos el 50% de los pixeles-->
-			<figure id="Logo">
-				<img src="logo.png">
+			<figure id="logo">
+				<img src="logo.png"/>
 			</figure>
-		</HEADER>
+			<h1>Bienvenido a mi Curso HTML 5</h1>
+			<!-- figure esta especializado para insertar imagen-->
+			<figure id="avatar">
+			<img src="avatar.png"/>
+			</figure>
+		</header>
 
+		<!-- Ahora para la barra de navegacion conviene usar una sola-->
+		<nav>
+			<ul>
+				<li><a href="#">Python</a></li>
+				<li><a href="#">HTML5</a></li>
+				<li><a href="#">JavaScript</a></li>
+				<li><a href="#">CSS3</a></li>
+				<li><a href="#">Django</a></li>
+
+				<li id="publicar_nav"><a href="">Publicar</a>
+
+				</li>
+
+			</ul>
+		</nav>
+		<!-- El  id contenido en CSS se llamaria con  #contenido -->
+		<section id="contenido">
+		<!--Class es  repetible en multiples elementos, en CSS
+		lo llamaremos con  .item -->
+			<article class="item">
+
+			   <!-- Debido a que son muchas figuras que se repetiran
+			   vamos a utilizar  class para  CSS-->
+				<figure class="imagen_item">
+				<img src="imagen.png" />
+				</figure>
+				<h2 class="titulo_item">
+					<a href="">Titulo del Articulo</a>
+				</h2>
+				<div class="autor_item">
+					por <a href="#">Systemtak</a>
+				</div>
+				<div class="datos_item">
+					<a href="#" class="tag_item"> Comprar</a>
+					<!-- span: a un texto plano diseño sin ponerle caja 
+					usamos para diferenciar parte del texto, ejemplo  mejorando.la  si  .la esta en negrita  entonces  esa parte debe estar dentro de un span para manejarlos desde CSS-->
+					<span class="fecha_item">
+						Hace <strong>5 </strong> min.
+					</span>
+					<a href="#" class="Comentarios_item">69</a>
+					<a href="#" class="guardar_item">*</a>
+				</div>
+				<div class="votacion">
+					<!-- la etiqueta a,  es de referencia-->
+					<a href="#" class="up"></a>
+					720
+					<a href=#"" class="down"></a>
+				</div>
+			</article>
+		</section>
 		<FOOTER>
+			<!-- P: cuando se quiere usar un parrafo, si se quiere -->
 			<P>
 				<strong> Design by </strong>
 			</P>
